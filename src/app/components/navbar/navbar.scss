@@ -1,0 +1,120 @@
+.navbar {
+	background-color:rgba(255,241,234,0.85);
+	box-shadow:0px 1px 2px 0 rgba(0,0,0,0.1);
+	border: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 110px;
+
+	.brand-col-padding {
+			p {
+		color: #333;
+		font-weight:normal;
+		}
+
+		span {
+				color: #cc0000;
+		}
+
+	}
+
+	.btn {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   width:130px;
+	
+	background-color:#cc0000;
+	background:linear-gradient(top, #ff0000 0%, #cc0000 100%);
+	background:-webkit-linear-gradient(top, #ff0000 0%, #cc0000 100%);
+	background:-moz-linear-gradient(top, #ff0000 0%, #cc0000 100%);
+	background:-o-linear-gradient(top, #ff0000 0%, #cc0000 100%);
+	background:-ms-linear-gradient(top, #ff0000 0%, #cc0000 100%);
+	border:1px solid #990000;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	color:#ffffff;
+	cursor:pointer;
+	position:relative;
+}
+
+	.btn:hover {
+	background-color:#ff0000;
+	background:linear-gradient(top, #cc0000 0%, #ff0000 100%);
+	background:-webkit-linear-gradient(top, #cc0000 0%, #ff0000 100%);
+	background:-moz-linear-gradient(top, #cc0000 0%, #ff0000 100%);
+	background:-o-linear-gradient(top, #cc0000 0%, #ff0000 100%);
+	background:-ms-linear-gradient(top, #cc0000 0%, #ff0000 100%);
+	}
+
+	p {
+		font-weight:bold;
+	}
+
+
+
+	.row-fluid {
+		width: 100%;
+		margin-top:10px;
+	height:35px;
+	background-color:rgba(255,255,255,0.95);
+border: 1px solid lightgray;
+
+	}
+
+
+.row-fluid a {
+	display:block;
+	float:left;
+	width:33.33%;
+	text-decoration:none;
+	text-align:center;
+	font-size:14px;
+	color:#990000;
+	line-height:35px;
+}	
+	
+
+		.row-fluid a:hover {
+		text-decoration: underline;
+		color:#990000;
+		}
+
+		
+
+
+	
+
+	
+	.form-group-sm {
+		label {
+			font-size: 13px;
+			font-weight: normal;
+		}
+	}
+	
+	.img-col-padding {
+	position:absolute;
+	top:20px;
+	left:50%;
+
+	div {
+	margin-left:-13px;
+	width:26px;
+	height:56px;
+	cursor:pointer;
+	background-image:url("/assets/images/arrow.png");
+	background-repeat:repeat-y;
+	}
+
+	
+	}
+		
+	
+
+
+	
+
+}
+
