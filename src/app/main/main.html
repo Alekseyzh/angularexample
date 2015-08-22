@@ -3,31 +3,22 @@
   <div>
     <acme-navbar creationDate="main.creationDate" />
   </div>
+  
 
-  <div class="carousel slide" id="carousel-beats">
-    <ol class="carousel-indicators">
-      <li data-target="carousel-beats" data-slide-to="0" class="active"></li>
-      <li data-target="carousel-beats" data-slide-to="1"></li>
-      <li data-target="carousel-beats" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="/assets/images/slide1.png" alt="beats"> 
+<div ng-controller="CarouselBeatsCtrl">
+  <div id="carousel-beats">
+    <carousel interval="myInterval" no-wrap="noWrapSlides">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img class="img-responsive" ng-src="/assets/images/{{slide.src}}" style="margin:auto;">
         <div class="carousel-caption">
+          {{slide.desc}}
         </div>
-      </div> 
-        <div class="item">
-        <img src="/assets/images/slide2.jpg" alt="beats2"> 
-        <div class="carousel-caption">
-        </div>
-       </div> 
-        <div class="item">
-        <img src="/assets/images/slide3.png" alt="beats3"> 
-        <div class="carousel-caption">
-        </div>
-       </div> 
-    </div>
+      </slide>
+    </carousel>
+
   </div>
+</div>
+
 
   <div class="downtown timer">
     <div class="container-fluid">
@@ -60,16 +51,74 @@
   </div>
 
   <div class="row">
+    <h1>Beats by dr. dre</h1>
     <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
       <div class="thumbnail">
         <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
         <div class="caption">
           <h3>{{ awesomeThing.title }}</h3>
           <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a>
+          <p class="btn-toolbar">
+            <span class="btn-group">
+              <a href="#" class="btn">Купить</a>
+            </span>
+            <span class="btn-group">
+              <a class="btn" href="#">Подробнее</a>
+            </span>
           </p>
         </div>
       </div>
     </div>
   </div>
+
+<div ng-controller="TabsBeatsCtrl">
+  <h1>Доставка и оплата</h1>
+  <tabset>
+    <tab heading="Москва и Московская область">
+    <p><span>Москва и Московская область:</span> <br/>
+        Доставка курьером в любую точку Москвы и Московской области до дверей Вашего дома. Оплата при получении.<br/>
+        <span>Сроки:</span> <br/>
+        на следующий день после заказа.<br/>
+        <span>Стоимость:</span> <br/>
+        - Стоимость доставки в пределах МКАД - 350 рублей.<br/>
+        - Стоимость доставки за пределы МКАД - 600 рублей.
+      </p>
+    </tab>
+    <tab heading="Доставка по РФ и СНГ">
+      <p><span>Доставка по РФ и СНГ</span> осуществляется экспресс доставкой «EMS» в любую точку РФ и СНГ. (Почта России и другие способы доставки обсуждаются индивидуально) <br/>
+      <span>Сроки:</span> <br/>
+      от 2 до 10 дней.<br/>
+      <span>Стоимость:</span> <br/>
+      Стоимость доставки от 300 рублей, зависит от региона.<br/>
+      Калькулятор стоимости <br/>
+      Большие = 1.5кг \ вкладыши = 0.7кг
+      </p>
+    </tab>
+    <tab heading="Самовывоз">
+      <p> <span>Москва и Московская область:</span> <br/>
+        Пункт самовывоза находится по адресу: г. Москва, Павелецкая площадь, 2 стр2.<br/>
+        <span>Оплата при получении!</span><br/>
+        Обязательно предупредить менеджера о самовывозе<br/>
+        <span>Время работы:</span> <br/>
+        Ежедневно с 10.00 до 19.00
+      </p>
+    </tab>
+  </tabset>
 </div>
+
+<div class="contact-info">
+  <h1>Контактная информация</h1>
+  <p>Наш адрес: г.Москва, ул Павелецкая пл.2 стр2.</p>
+  <span>Метро Павелецкая</span>
+  <div ng-controller="myCtrl">
+    <google-map
+      center="mapOption.center"
+      zoom="mapOption.zoom"
+      control="myGoogleMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.8169536753953!2d107.58873840000003!3d51.82777420000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5dafdb4a130d329f%3A0x25b48c1f6493d4b9!2z0J_Qm9Ce0KnQkNCU0Kwg0KHQntCS0JXQotCe0JIsINGB0LXQvNC10LnQvdGL0Lkg0YDQtdC60LvQsNC80L3Qvi3QuNC90YTQvtGA0LzQsNGG0LjQvtC90L3Ri9C5INC20YPRgNC90LDQuw!5e0!3m2!1sru!2sru!4v1440240782139" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </google-map>
+  </div>
+</div>
+
+
+
